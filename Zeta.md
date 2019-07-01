@@ -7,13 +7,12 @@ autosize: true
 Riemann Zeta Function
 ========================================================
 
-- The Riemann Zeta function is defined on complex numbers as $\zeta(z)=\sum_{n=1}^{\inf}\frac{1}{n^z}$
-- An old, famous, and difficult problem is to show that  
-  the non-trivial zeroes of the $\zeta(z)$ function lie on the critical line $z=0.5+yi$.
-- Presented is an interactive web page permitting the exploration of the zeta function. 
-- This compiled document is hosted at XXX.
-- The source for this document, and for the associated Shiny application, is hosted at XXX.
-- The interactive Shiny application itself, including its documentation, is a XXX.
+- The Riemann Zeta function is  $\zeta(z)=\sum_{n=1}^{\inf}\frac{1}{n^z}$
+- An old  problem is to show that the non-trivial zeroes of the $\zeta(z)$ function lie on the critical line $z=0.5+yi$.
+- Presented is an interactive web page for the exploration of the zeta function. 
+- This compiled document is at [http://rpubs.com/dlarue/zetapres](http://rpubs.com/dlarue/zetapres).
+- The source for this document the Shiny application, is at [https://github.com/David-Maurice-Larue/zeta](https://github.com/David-Maurice-Larue/zeta).
+- The interactive Shiny application, with documentation, is at  [https://david-maurice-larue.shinyapps.io/ShinyZetaPlot/](https://david-maurice-larue.shinyapps.io/ShinyZetaPlot/).
 
 Computing Zeta
 ========================================================

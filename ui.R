@@ -26,7 +26,7 @@ shinyUI(fluidPage(
                 value="20"),
       textInput(inputId="rez",
                 label= "Real Part of z (default 0.5; suggest in (0,1)):",
-                value="0.5")
+                value="0.5") 
     ),
     
     # Show a plot of the generated distribution

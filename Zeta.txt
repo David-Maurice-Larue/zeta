@@ -19,10 +19,15 @@ Computing Zeta
 
 We make use of the R library "pracma" to compute values of the zeta function.
 
-```{r, echo=TRUE,messages=FALSE}
+
+```r
 library(pracma)
 z=2+3i
 zeta(z)
+```
+
+```
+## [1] 0.798022-0.1137443i
 ```
 
 3D Plots of Zeta
@@ -30,51 +35,11 @@ zeta(z)
 
 We present several 3-Dimensional plots of the zeta function along various line segments of z with fixed real part. Here is zeta(z) on z=0.5+yi,  with y from 0 to 20, using the library "plot3D".
 
-```{r, echo=FALSE}
-library(plot3D)
-    f1<-function(minimz=0,maximz=20,rez=0.5){
-      lines3D(fr,fi,x,main="Zeta function",xlab="re(zeta(z))",ylab="im(zeta(z))",zlab="im(z=rez+xi)")
-      lines3D(c(0,0),c(0,0),c(minimz,maximz),add=TRUE)
-    }
-    
-      minimz<-0
-      maximz<-20
-      rez<-0.5
-      
-      x <- seq(minimz, maximz, len=2001)
-      z <- rez + x*1i
-      fr <- Re(zeta(z))
-      fi <- Im(zeta(z))
-      fa <- abs(zeta(z))
-      
-      f1()
-```
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png)
 
 2D Plots of Zeta
 ========================================================
 
 Also we give a 2 Dimentional plot of the real and complex parts of zeta(z) separately.
 
-```{r echo=FALSE}
-          f4<-function(minimz=0,maximz=20,rez=0.5){
-            plot(x,fr,ylab="",col="blue",type="l",main=paste("Value of Zeta(z) vs imaginary part of z with real part ",rez),ylim=c(zmin,zmax))
-            lines(x=x,y=fi,col="red")
-            lines(x=x,y=fa,col="black")
-            lines(x=c(minimz,maximz),y=c(0,0))
-            legend(x="topleft",legend=c("Re(zeta)","Im(zeta)","Abs(zeta)"),fill=c("blue","red","black"))
-          }
-      minimz<-0
-      maximz<-20
-      rez<-0.5
-          
-           x <- seq(minimz, maximz, len=2001)
-          z <- rez + x*1i
-          fr <- Re(zeta(z))
-          fi <- Im(zeta(z))
-          fa <- abs(zeta(z))
-          
-          zmin<-min(fr,fi,fa)
-          zmax<-max(fr,fi,fa)
-          
-          f4(minimz=minimz,maximz=maximz,rez=rez)
-```
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)

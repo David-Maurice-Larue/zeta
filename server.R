@@ -19,7 +19,7 @@ shinyServer(function(input, output) {
   output$dist1Plot <- renderPlot({
     f1<-function(minimz=0,maximz=20,rez=0.5){
       lines3D(fr,fi,x,main="Zeta function",xlab="re(zeta(z))",ylab="im(zeta(z))",zlab="im(z=rez+xi)")
-      lines3D(c(0,0),c(0,0),c(minimz,maximz),add=TRUE)
+      lines3D(c(0,0),c(0,0),c(minimz,maximz),add=TRUE) 
     }
     
       minimz<-as.numeric(input$minimz)

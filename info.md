@@ -14,9 +14,9 @@ output: html_document
 - Some code adapted from [pracma examples](https://www.rdocumentation.org/packages/pracma/versions/1.9.9/topics/zeta)
 - Where the real part, imaginary part (and absolute value) of zeta(z) are 0 is one of the zeroes of the zeta function
 - A more limited, non-Shiny view of this was produced at [plot.ly zeta example](http://rpubs.com/dlarue/zeta)
-- This Shiny app is hosted at XXX. Submitted in support of Coursera,Data Science Specialization, Developing Data Products, Week 4, Project.
-- The associated Presentation is hosted at XXX.
-- The source files Zeta.Rpres, ui.R, server.R,and info.Rmd are located at XXX.
+- This Shiny app is hosted at [https://david-maurice-larue.shinyapps.io/ShinyZetaPlot/](https://david-maurice-larue.shinyapps.io/ShinyZetaPlot/). Submitted in support of Coursera, Data Science Specialization, Developing Data Products, Week 4, Project.
+- The associated Presentation is hosted at [http://rpubs.com/dlarue/zetapres](http://rpubs.com/dlarue/zetapres).
+- The source files Zeta.Rpres, ui.R, server.R, and info.Rmd are located at [https://github.com/David-Maurice-Larue/zeta](https://github.com/David-Maurice-Larue/zeta). 
 
 ## Usage
 
