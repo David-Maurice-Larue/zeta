@@ -1,0 +1,81 @@
+Zeta
+========================================================
+author: David Larue
+date: July 1,2019
+autosize: true
+
+Riemann Zeta Function
+========================================================
+
+- The Riemann Zeta function is defined on complex numbers as $\zeta(z)=\sum_{n=1}^{\inf}\frac{1}{n^z}$
+- An old, famous, and difficult problem is to show that  
+  the non-trivial zeroes of the $\zeta(z)$ function lie on the critical line $z=0.5+yi$.
+- Presented is an interactive web page permitting the exploration of the zeta function. 
+- This compiled document is hosted at XXX.
+- The source for this document, and for the associated Shiny application, is hosted at XXX.
+- The interactive Shiny application itself, including its documentation, is a XXX.
+
+Computing Zeta
+========================================================
+
+We make use of the R library "pracma" to compute values of the zeta function.
+
+```{r, echo=TRUE,messages=FALSE}
+library(pracma)
+z=2+3i
+zeta(z)
+```
+
+3D Plots of Zeta
+========================================================
+
+We present several 3-Dimensional plots of the zeta function along various line segments of z with fixed real part. Here is zeta(z) on z=0.5+yi,  with y from 0 to 20, using the library "plot3D".
+
+```{r, echo=FALSE}
+library(plot3D)
+    f1<-function(minimz=0,maximz=20,rez=0.5){
+      lines3D(fr,fi,x,main="Zeta function",xlab="re(zeta(z))",ylab="im(zeta(z))",zlab="im(z=rez+xi)")
+      lines3D(c(0,0),c(0,0),c(minimz,maximz),add=TRUE)
+    }
+    
+      minimz<-0
+      maximz<-20
+      rez<-0.5
+      
+      x <- seq(minimz, maximz, len=2001)
+      z <- rez + x*1i
+      fr <- Re(zeta(z))
+      fi <- Im(zeta(z))
+      fa <- abs(zeta(z))
+      
+      f1()
+```
+
+2D Plots of Zeta
+========================================================
+
+Also we give a 2 Dimentional plot of the real and complex parts of zeta(z) separately.
+
+```{r echo=FALSE}
+          f4<-function(minimz=0,maximz=20,rez=0.5){
+            plot(x,fr,ylab="",col="blue",type="l",main=paste("Value of Zeta(z) vs imaginary part of z with real part ",rez),ylim=c(zmin,zmax))
+            lines(x=x,y=fi,col="red")
+            lines(x=x,y=fa,col="black")
+            lines(x=c(minimz,maximz),y=c(0,0))
+            legend(x="topleft",legend=c("Re(zeta)","Im(zeta)","Abs(zeta)"),fill=c("blue","red","black"))
+          }
+      minimz<-0
+      maximz<-20
+      rez<-0.5
+          
+           x <- seq(minimz, maximz, len=2001)
+          z <- rez + x*1i
+          fr <- Re(zeta(z))
+          fi <- Im(zeta(z))
+          fa <- abs(zeta(z))
+          
+          zmin<-min(fr,fi,fa)
+          zmax<-max(fr,fi,fa)
+          
+          f4(minimz=minimz,maximz=maximz,rez=rez)
+```
